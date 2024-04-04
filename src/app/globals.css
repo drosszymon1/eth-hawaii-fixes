@@ -1,0 +1,485 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --color-neutral-1: #022D22;
+  --color-neutral-2: #023C2D;
+  --color-neutral-3: #094E3D;
+  --color-neutral-4: #136953;
+  --color-neutral-5: #287561;
+  --color-neutral-6: #E1E4C2;
+  --color-neutral-7: #94A289;
+  --color-primary-1: #82E6CD;
+  --color-primary-2: #45D9B5;
+  --color-primary-3: #2ABD9A;
+  --color-primary-4: #1B7660;
+  --color-secondary-1: #F7F1CE;
+  --color-secondary-2: #E7E1BD;
+  --color-secondary-3: #CDC8A9;
+  --color-secondary-4: #535F57;
+  --color-error-1: #930A23;
+  --color-error-2: #E4C6B1;
+}
+
+body {
+  color: var(--color-neutral-1);
+  background: var(--color-secondary-2);
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+scrollbar-width: none;
+ }
+
+@layer base {
+  @font-face {
+    font-family: 'ClashGrotesk';
+    src: url('/fonts/ClashGrotesk-Variable.woff2') format('woff2'),
+         url('/fonts/ClashGrotesk-Variable.woff') format('woff'),
+         url('/fonts/ClashGrotesk-Variable.ttf') format('truetype');
+         font-weight: 200 700;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'ClashGrotesk';
+    src: url('/fonts/ClashGrotesk-Extralight.woff2') format('woff2'),
+         url('/fonts/ClashGrotesk-Extralight.woff') format('woff'),
+         url('/fonts/ClashGrotesk-Extralight.ttf') format('truetype');
+         font-weight: 200;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'ClashGrotesk';
+    src: url('/fonts/ClashGrotesk-Light.woff2') format('woff2'),
+         url('/fonts/ClashGrotesk-Light.woff') format('woff'),
+         url('/fonts/ClashGrotesk-Light.ttf') format('truetype');
+         font-weight: 300;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'ClashGrotesk';
+    src: url('/fonts/ClashGrotesk-Regular.woff2') format('woff2'),
+         url('/fonts/ClashGrotesk-Regular.woff') format('woff'),
+         url('/fonts/ClashGrotesk-Regular.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'ClashGrotesk';
+    src: url('/fonts/ClashGrotesk-Medium.woff2') format('woff2'),
+         url('/fonts/ClashGrotesk-Medium.woff') format('woff'),
+         url('/fonts/ClashGrotesk-Medium.ttf') format('truetype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'ClashGrotesk';
+    src: url('/fonts/ClashGrotesk-Semibold.woff2') format('woff2'),
+         url('/fonts/ClashGrotesk-Semibold.woff') format('woff'),
+         url('/fonts/ClashGrotesk-Semibold.ttf') format('truetype');
+         font-weight: 600;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'ClashGrotesk';
+    src: url('/fonts/ClashGrotesk-Bold.woff2') format('woff2'),
+         url('/fonts/ClashGrotesk-Bold.woff') format('woff'),
+         url('/fonts/ClashGrotesk-Bold.ttf') format('truetype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sao Torpes';
+    src: url('/fonts/SaoTorpesRegular.woff2') format('woff2'),
+        url('/fonts/SaoTorpesRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+    .heading1 {
+      font-family: Sao Torpes, sans-serif;
+      font-size: 5.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+  @media screen and (min-width: 768px) {
+    .heading1 {
+      font-size: 8.25rem;
+      line-height: 80%; /* 6.6rem */
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .heading1 {
+      font-size: 16.562rem;
+      line-height: 80%; /* 13.25rem */
+      margin-left: -0.625rem;
+    }
+  }
+
+  @media screen and (min-width: 2000px) {
+    .heading1 {
+      font-size: 22rem;
+      line-height: 80%; /* 13.25rem */
+      margin-left: -0.625rem;
+    }
+  }
+
+    .heading2 {
+      font-family: Sao Torpes, sans-serif;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 3.75rem */
+    }
+  
+
+  @media screen and (min-width: 768px) {
+    .heading2 {
+      font-size: 2rem;
+      line-height: 120%; /* 5.625rem */
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .heading2 {
+      font-size: 3rem;
+      line-height: 125%; /* 11.25rem */
+    }
+  }
+
+    .heading3 {
+      font-family: Sao Torpes, sans-serif;
+      font-size: 1.75rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
+  
+
+  @media screen and (min-width: 768px) {
+    .heading3 {
+      font-size: 2rem;
+      font-style: normal;
+      line-height: 115%; /* 2.3rem */
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .heading3 {
+      font-size: 2rem;
+      font-style: normal;
+      line-height: 115%; /* 2.3rem */
+    }
+  }
+
+    .heading4 {
+      font-family: Sao Torpes, sans-serif;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 1.8rem */
+    }
+  
+
+  @media screen and (min-width: 768px) {
+    .heading4 {
+      font-size: 1.5rem;
+      line-height: 120%; /* 2.1rem */
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .heading4 {
+      font-size: 1.5rem;
+      line-height: 120%; /* 2.4rem */
+    }
+  }
+
+    .title1 {
+      font-family: ClashGrotesk, sans-serif;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  
+
+  @media screen and (min-width: 768px) {
+    .title1 {
+      font-size: 1.5rem;
+      line-height: 122%; /* 2.44rem */
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .title1 {
+      font-size: 1.5rem;
+      line-height: 122%; /* 3.05rem */
+    }
+  }
+
+    .title2 {
+      font-family: ClashGrotesk, sans-serif;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 136%; /* 1.53rem */
+      text-transform: uppercase;
+    }
+  
+
+  @media screen and (min-width: 768px) {
+    .title2 {
+      font-size: 1.125rem;
+      line-height: 136%; /* 1.53rem */    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .title2 {
+      font-size: 1.125rem;
+      line-height: 136%; /* 1.53rem */    }
+  }
+
+    .body1 {
+      font-family: ClashGrotesk, sans-serif;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal; /* 127.778% */
+    }
+  
+
+  @media screen and (min-width: 768px) {
+    .body1 {
+      font-size: 1.125rem;
+      line-height: 1.4375rem; /* 127.778% */
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .body1 {
+      font-size: 1.125rem;
+      line-height: 1.4375rem; /* 127.778% */
+    }
+  }
+
+    .body2 {
+      font-family: ClashGrotesk, sans-serif;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 136%; /* 1.36rem */
+    }
+  
+
+  @media screen and (min-width: 768px) {
+    .body2 {
+      font-size: 1rem;
+      line-height: normal; /* 1.36rem */
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .body2 {
+      font-size: 1rem;
+      line-height: normal; /* 1.36rem */
+    }
+  }
+
+    .caption1 {
+      font-family: ClashGrotesk, sans-serif;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal; /* 1.36rem */
+    }
+  
+
+  @media screen and (min-width: 768px) {
+    .caption1 {
+      font-size: 0.875rem;
+      line-height: normal; /* 1.36rem */
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .caption1 {
+      font-size: 0.875rem;
+      line-height: normal; /* 1.36rem */
+    }
+  }
+
+  .caption2 {
+font-size: 0.75rem;
+      line-height: normal; /* 1.36rem */
+  }
+
+  @media screen and (min-width: 768px) {
+    .caption2 {
+      font-size: 0.75rem;
+      line-height: normal; /* 1.36rem */
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .caption2 {
+      font-size: 0.75rem;
+      line-height: normal; /* 1.36rem */
+      font-weight: 500;
+    }
+  }
+}
+
+.custom-container {
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .custom-container {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .custom-container {
+    padding: 0;
+  }
+}
+
+.first-section {
+  height: 100dvh;
+}
+
+@media screen and (min-width: 1024px) {
+  .first-section {
+    height: 140vh;
+  }
+}
+
+.container {
+  /* max-width: 1440px; */
+}
+
+@media screen and (min-width: 2048px) {
+  .container {
+    max-width: unset;
+    padding: 0 3vw;
+  }
+}
+
+.first-section-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  resize: none;
+  width: 100%;
+  height: 100dvh;
+  z-index: -1;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .first-section-background {
+    height: 140vh;
+  }
+}
+
+.sponsors-background {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  resize: horizontal;
+  width: 100%;
+  z-index: 5;
+}
+
+.button-mark {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .button-mark {
+    background: var(--color-secondary-1);
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.button-mark > svg * {
+  fill: var(--color-neutral-1) !important;
+  stroke: var(--color-neutral-1) !important;
+}
+
+.banner-button > button {
+  padding: 0.87rem 1.42rem !important;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-button > a > button {
+    padding: 0.5rem 0.5rem 0.5rem 1.25rem !important;
+  }
+}
+
+.banner-button > button:hover > .button-mark > svg * {
+  transform: translateX(1px) translateY(-1px) scale(1.02);
+  transition: transform 0.25s ease-in-out;
+}
+
+.link-external:hover {
+  color: var(--color-neutral-3);
+}
+
+.link-external:active {
+  color: var(--color-neutral-5);
+}
+
+.footer-circle-button {
+  width: 60px;
+  height: 60px;
+  padding: 0.5rem;
+}

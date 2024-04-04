@@ -1,0 +1,130 @@
+
+.circle-box {
+    width: 171px;
+    height: 171px;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .circle-box {
+        width: 267px;
+        height: 267px;
+    }
+}
+
+.circle-box.active {
+    background: var(--color-secondary-1);
+}
+
+.circle-box.active::before {
+    width: 159.44px;
+    height: 159.44px;
+    flex-shrink: 0;
+    content: url("/round-border-small.svg");
+    position: absolute;
+    top: 4.5px;
+    bottom: 4.5px;
+    left: 4.5px;
+    right: 4.5px;
+}
+
+@media screen and (min-width: 768px) {
+    .circle-box.active::before {
+        width: 248.96px;
+        height: 248.96px;
+        flex-shrink: 0;
+        content: url("/circle-round-border.svg");
+        position: absolute;
+        top: 9.02px;
+        bottom: 9.02px;
+        left: 9.02px;
+        right: 9.02px;
+    }
+}
+
+.circle-box.inactive::before {
+    content: url("/round-inactive-small-border.svg");
+    width: 159.44px;
+    height: 159.44px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 4.5px;
+    bottom: 4.5px;
+    left: 4.5px;
+    right: 4.5px;
+}
+
+@media screen and (min-width: 768px) {
+    .circle-box.inactive::before {
+        width: 248.96px;
+        height: 248.96px;
+        flex-shrink: 0;
+        content: url("/circle-round-border-inactive.svg");
+        position: absolute;
+        top: 9.02px;
+        bottom: 9.02px;
+        left: 9.02px;
+        right: 9.02px;
+    }
+}
+
+.mobile-icon {
+    display: block;
+}
+
+.mobile-logo {
+    display: block;
+}
+
+.desktop-icon {
+    display: none;
+}
+
+.desktop-logo {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-icon {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: none;
+    }
+
+    .desktop-icon {
+        display: block;
+    }
+
+    .desktop-logo {
+        display: block;
+    }
+}
+
+.mobile-aloha {
+    display: block;
+}
+
+.desktop-aloha {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-aloha {
+        display: none;
+    }
+
+    .desktop-aloha {
+        display: block;
+    }
+}
+
+.circle-box.inactive {
+    background: var(--color-neutral-3);
+}
+
+.active-text {
+    color: var(--color-primary-2);
+    font-family: "Sao Torpes";
+  }

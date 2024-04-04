@@ -1,0 +1,62 @@
+.button {
+  background-color: var(--color-primary-1);
+  color: var(--color-neutial-1);
+  padding: 1.0625rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 5rem;
+  transition: background-color 0.15s ease;
+  text-wrap: nowrap;
+  z-index: 1;
+}
+
+.button:hover {
+  background-color: var(--color-primary-2);
+}
+
+.button:active {
+  background-color: var(--color-primary-3);
+}
+
+.button:disabled {
+  background-color: var(--color-neutral-7);
+  color: var(--color-secondary-2);
+}
+
+.button.only-icon {
+  padding-inline: 1.15rem;
+}
+
+.button.secondary {
+  background-color: var(--color-neutral-1);
+  color: var(--color-secondary-1);
+}
+
+.button.small {
+  padding: 0.78125rem 1.25rem;
+}
+
+.button.secondary:hover {
+  background-color: var(--color-neutral-3);
+}
+
+.button.secondary:active {
+  background-color: var(--color-neutral-5);
+}
+
+.button.secondary:disabled {
+  background-color: var(--color-neutral-7);
+  color: var(--color-secondary-2);
+}
+
+.button.secondary.small.only-icon {
+  padding-inline: 0.78125rem;
+}
+
+.button.secondary svg * {
+  fill: var(--color-secondary-1);
+  stroke: var(--color-secondary-1);
+}

@@ -1,0 +1,71 @@
+
+  .navigation {
+    padding: 1.25rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+  }
+
+  @media screen and (min-width: 2048px) {
+    .navigation {
+      padding: 1.25rem 5vw !important;
+    }
+  }
+
+  .navigation .button-group .ticket-btn {
+    display: none;
+  }
+
+  .navigation .logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .navigation .divider {
+    height: 1.25rem;
+    border: solid 1px var(--color-neutral-2);
+    border-radius: 2px;
+  }
+
+  .navigation .logo-details p.title {
+    font-family: ClashGrotesk, sans-serif;
+    font-size: 0.875rem;
+    line-height: normal;
+    font-weight: bold;
+    color: var(--color-neutral-1);
+  }
+
+  .navigation .logo-details p.subtitle {
+    font-family: ClashGrotesk, sans-serif;
+    font-size: 0.875rem;
+    line-height: normal;
+    font-weight: 500;
+    color: var(--color-neutral-1);
+  }
+  
+  .navigation .button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.1875rem;
+  }
+
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    padding: 1.25rem 0;
+  }
+  .navigation .button-group .ticket-btn {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navigation {
+    padding: 1.75rem 0rem;
+  }
+}

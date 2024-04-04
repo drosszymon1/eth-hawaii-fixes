@@ -1,0 +1,73 @@
+@keyframes carouselMove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.text-in-banner { 
+    min-height: 74dvh;
+}
+
+@media screen and (min-width: 768px) {
+    .text-in-banner {
+        min-height: unset;
+    }
+}
+
+.bannerCarousel {
+    background: var(--color-neutral-1);
+    /* margin-top: 8dvh; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 4rem;
+    margin-left: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .bannerCarousel {
+        width: 120%;
+        margin-left: -10%;
+        margin-top: 6rem;
+    }
+}
+
+
+.carousel {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.875rem 0;
+    height: 100%;
+    animation: carouselMove 35s infinite linear;
+}
+
+.carouselItem {
+    color: var(--color-secondary-1);
+    display: flex;
+    align-items: center;
+}
+
+.bannerCarousel:hover .carousel {
+    animation-play-state: paused;
+    cursor: default;
+}
+
+.carouselItem > p {
+    line-height: 100%;
+    padding-top: 0.285rem;
+    margin-left: 0;
+}
+
+.carouselItem::after {
+    content: url('/smallLogoSeparator.svg');
+    display: block;
+    width: 100%;
+    color: red;
+    height: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}

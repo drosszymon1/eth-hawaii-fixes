@@ -1,0 +1,56 @@
+.input-container.success::before {
+    content: url("/check.svg");
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 24px;
+    width: 24px;
+}
+
+.input-container.error::after {
+    content: url("/error-mark.svg");
+    position: absolute;
+    right: 1.5rem;
+    top: 29.5px;
+    transform: translateY(-50%);
+    height: 24px;
+    width: 24px;
+}
+
+
+.input {
+    padding: 1.5315rem 1.5rem;
+    border-radius: 12px;
+    background: var(--color-secondary-2);
+    color: var(--color-neutral-2);
+    outline: none;
+    width: 100%;
+    line-height: 1.4375rem;
+}
+
+.input::placeholder {
+    color: var(--color-secondary-4);
+    line-height: 1.4375rem;
+}
+
+.input:focus {
+    outline: 2px solid var(--color-neutral-5);
+    background: var(--color-neutral-6);
+    color: var(--color-neutral-2);
+}
+
+.input.success {
+    outline: none;
+    background: var(--color-neutral-6);
+}
+
+.input.error {
+    color: var(--color-error-1);
+    background: var(--color-error-2);
+    outline: none;
+}
+
+.error-desc {
+    color: var(--color-error-1);
+}

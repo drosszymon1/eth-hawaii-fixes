@@ -1,0 +1,8 @@
+.sponsors-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    resize: horizontal;
+    width: 100%;
+    z-index: 5;
+  }

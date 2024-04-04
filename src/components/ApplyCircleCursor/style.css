@@ -1,0 +1,85 @@
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateRevert {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media (min-width: 1024px) {
+    .mobile-circle {
+        display: none !important;
+    }
+}
+
+.cursor {
+  z-index: 99999;
+  will-change: transform;
+  transform: translate(-50%, -50%);
+  cursor: none;
+}
+
+.ball {
+    width: 220px;
+    height: 220px;
+    background-color: var(--color-neutral-3);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 100%;
+    z-index: 9999; 
+    cursor: none;
+    user-select: none;
+    animation: rotateCircle 20s linear infinite;
+    display: none;
+}
+
+/* .ball.active {
+    transform: scale(1);
+    opacity: 1;
+} */
+
+.ball::before {
+    width: 205px;
+    height: 205px;
+    flex-shrink: 0;
+    content: url("/small-circle-round-border.svg");
+    position: absolute;
+    z-index: 2001;
+    top: 5.9px;
+    left: 5.9px;
+    animation: none;
+}
+
+.ball::after {
+    width: 193px;
+    height: 205px;
+    flex-shrink: 0;
+    content: url("/aloha-border.svg");
+    position: absolute;
+    z-index: 2001;
+    top: 7px;
+    left: 12px;
+    animation: none;
+}
+
+.ball .insideText {
+    animation: rotateRevert 20s linear infinite;
+}
+
+
+.mobile-circle {
+    position: relative;
+    display: flex;
+}

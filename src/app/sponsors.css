@@ -1,0 +1,124 @@
+.sponsors { 
+  height: auto;
+  position: relative;
+  border-radius: 30px;
+  z-index: 3000;
+  height: 110dvh;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-neutral-1);
+}
+
+.sponsors-wrapper {
+  /* height: calc(75dvh); */
+  margin-top: -1rem;
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .sponsors-wrapper {
+    height: 100dvh;
+    padding: 5rem 0 7.75rem 0;
+  }
+}
+
+@media screen and (min-width: 2048px) {
+  .sponsors-wrapper {
+    scale: 1.4;
+    height: unset;
+    gap: 3rem;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .sponsors {
+    border-radius: 40px;
+    margin-top: 100px;
+    height: calc(100dvh + 80px);
+    z-index: 3000;
+    padding: 0;
+  }
+}
+
+.apply {
+  position: relative;
+  background: var(--color-primary-1);
+  height: 100dvh;
+  cursor: auto;
+  margin-top: -95dvh;
+  margin-bottom: 0;
+  z-index: 5;
+}
+
+@media screen and (min-width: 768px) {
+  .apply {
+    z-index: 0;
+    height: calc(100dvh + 100px);
+    cursor: none;
+  }
+}
+
+.apply-text {
+  padding-top: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .apply-text {
+    padding-top: 6.875rem;
+  }
+}
+
+.apply-text-light {
+  color: var(--color-neutral-4);
+}
+
+.apply-text-light + p {
+  max-width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .apply-text-light + p {
+    max-width: unset;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .apply-text-light {
+    max-width: unset;
+  }
+}
+
+.footer {
+z-index: 5;
+background: var(--color-secondary-1);
+border-radius: 32px 32px 0 0;
+margin-top: -15dvh;
+padding: 2rem 0 2rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 3.5rem 0 3rem 0;
+  }
+}
+
+.light-text {
+  color: var(--color-secondary-1);
+  margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .light-text {
+    margin-top: 0;
+    margin-bottom: 0;
+  }; 
+}
+  
+  .circle-boxes-container {
+    margin-top: 4rem;
+    /* max-width: 1068px; */
+  }; 
+
